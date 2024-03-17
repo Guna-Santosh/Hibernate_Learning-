@@ -13,12 +13,12 @@ public class OneToOneExecutor {
 		config.configure("hibernate.cfg.xml");
 		SessionFactory buildSessionFactory = config.buildSessionFactory();
 		
+		System.out.println(buildSessionFactory);
 		Session openSession = buildSessionFactory.openSession();
 		Transaction beginTransaction = openSession.beginTransaction();
-		
-		
-		openSession.save(null);
-		beginTransaction.commit();
+				
+//		openSession.save(null);
+//		beginTransaction.commit();
 		
 	}
 
