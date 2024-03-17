@@ -4,6 +4,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import lombok.Data;
+
+@Data
 @Entity
 public class Question {
 	
@@ -14,14 +17,12 @@ public class Question {
 	@Column(name = "Questions")
 	private String question;
 	
-	@Column(name = "Answers")
-	private String answer;
+	private Answer answer;
 
-	public Question(int qId, String question, String answer) {
+	public Question(int qId, String question) {
 		super();
 		this.qId = qId;
 		this.question = question;
-		this.answer = answer;
 	}
 
 
