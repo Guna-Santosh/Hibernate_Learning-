@@ -3,6 +3,7 @@ package com.OneToOne;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 import lombok.Data;
 
@@ -17,6 +18,7 @@ public class Question {
 	@Column(name = "Questions")
 	private String question;
 	
+	@OneToOne
 	private Answer answer;
 
 	public Question(int qId, String question) {
