@@ -30,6 +30,8 @@ public class OneToOneExecutor {
 		Transaction beginTransaction = openSession.beginTransaction();
 				
 		openSession.save(question);
+		openSession.save(answer);
+		
 		beginTransaction.commit();
 		
 	}

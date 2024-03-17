@@ -9,15 +9,14 @@ public class EmbeddingExecutor {
 
 	public static void main(String[] args) {
 
-		
 		Configuration config = new Configuration();
 		config.configure("hibernate.cfg.xml");
 		SessionFactory sf = config.buildSessionFactory();
 
 		Student student = new Student();
-		student.setId(00002);
+		student.setId(00001);
 		student.setName("Guna");
-		
+
 		Certificate certificate = new Certificate();
 		certificate.setId("ja02");
 		certificate.setCourse("Java");
