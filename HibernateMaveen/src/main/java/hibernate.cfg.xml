@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration SYSTEM
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="connection.url">jdbc:oracle:thin:@10.11.12.15:1521/Creditos</property>
+		<property name="connection.username">training</property>
+		<property name="connection.password">training</property>
+		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<!-- <mapping class="com.test.Employees" /> -->
+		<mapping class="com.embeddingObject.Student" />
+
+	</session-factory>
+
+</hibernate-configuration>
