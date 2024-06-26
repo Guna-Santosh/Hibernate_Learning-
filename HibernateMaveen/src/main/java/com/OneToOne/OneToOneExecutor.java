@@ -15,13 +15,13 @@ public class OneToOneExecutor {
 		
 		//Question Object
 		Question question = new Question();
-		question.setQId(111);
-		question.setQuestion("What is Java");
+		question.setQId(117);
+		question.setQuestion("What is Angular");
 		
 		//Answer Object
 		Answer answer = new Answer();
-		answer.setAId(101);
-		answer.setAnswer("Java is a Programming Langulage ");
+		answer.setAId(115);
+		answer.setAnswer("Angular is a  Langulage ");
 		
 		question.setAnswer(answer);
 		
@@ -29,9 +29,10 @@ public class OneToOneExecutor {
 		Session openSession = buildSessionFactory.openSession();
 		Transaction beginTransaction = openSession.beginTransaction();
 				
-		openSession.save(question);
-		openSession.save(answer);
-		
+//		openSession.save(question);
+//		openSession.save(answer);
+		 Answer load = openSession.load(Answer.class, 105);
+		 System.out.println(load);
 		beginTransaction.commit();
 		
 	}
